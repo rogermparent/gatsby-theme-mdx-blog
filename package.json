@@ -1,0 +1,28 @@
+{
+  "name": "@arrempee/gatsby-theme-mdx-blog",
+  "version": "1.0.0",
+  "description": "A meta-theme that brings together the mdx-pages, mdx-collections, and plugin-taxonomies to scaffold the logic for a basic MDX file-based blog.",
+  "main": "gatsby-config.js",
+  "repository": "rogermparent/gatsby-plugin-taxonomies",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme",
+    "blog"
+  ],
+  "author": "rmp",
+  "license": "MIT",
+  "dependencies": {
+    "@arrempee/gatsby-helpers": "^1.0.0",
+    "@arrempee/gatsby-theme-mdx-pages": "^1.0.0",
+    "@arrempee/gatsby-theme-mdx-collections": "^1.0.0",
+    "@arrempee/gatsby-plugin-taxonomies": "^1.0.0",
+    "@mdx-js/mdx": "^1.1.1",
+    "@mdx-js/react": "^1.1.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6"
+  }
+}
