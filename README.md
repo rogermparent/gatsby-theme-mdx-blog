@@ -6,6 +6,31 @@ inspiration from the [Hugo](https://gohugo.io/) static site generator, aiming to
 implement the Taxonomy and Collection features, as well as the robust template
 resolution of pages.
 
+## Quickstart
+
+For the quickest start, try out [this theme's basic
+starter](https://github.com/rogermparent/gatsby-starter-mdx-blog-skeleton)!
+Seeing the thing in action will give you a good base of context that helps
+before trying to implement something more custom.
+
+Once you reach that point, follow these rough steps if you want to add it to another project:
+
+1. Add `@arrempee/gatsby-theme-mdx-blog` to your package with your manager of choice.
+
+2. Add `@arrempee/gatsby-theme-mdx-blog` to the `plugins` array of your site's
+   `gatsby-config.js`. You can stick with the default or use some of the many
+   options to customize the logic.
+
+3. Create at least a default template component in `src/templates/default.js`
+   (unless you set it to something else). Check out [the one in the starter
+   theme](https://github.com/rogermparent/gatsby-starter-mdx-blog-skeleton/blob/master/src/templates/default.js)
+   for an example.
+
+4. Write some MDX files in the `content` directory (or whatever else you set
+   `contentDir` to).
+   
+5. Run `gatsby develop` and watch the magic happen! Well, hopefully.
+
 ## Sub-themes
 
 For the purpose of maximum reusability, `gatsby-theme-mdx-blog` is composed from
