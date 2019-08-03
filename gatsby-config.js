@@ -1,4 +1,5 @@
 const mdxPageTermsResolver = require('./mdx-page-terms-resolver')
+const mdxPageCollectionResolver = require('./mdx-page-collection-resolver')
 
 module.exports = themeOptions => {
 
@@ -9,17 +10,28 @@ module.exports = themeOptions => {
     const plugins = [];
 
     plugins.push({
-        resolve: '@arrempee/gatsby-theme-mdx-collections',
-        options: themeOptions,
+        resolve: '@arrempee/gatsby-theme-mdx-pages',
+        options: {
+            ...themeOptions,
+            createPages: false,
+        }
+    })
+
+    plugins.push({
+        resolve: `@arrempee/gatsby-plugin-collections`,
+        options: {
+            ...themeOptions,
+            collectionResolvers: {
+                'MdxPage': mdxPageCollectionResolver,
+                ...themeOptions.collectionResolvers,
+            },
+        }
     })
 
     if(taxonomyOptions !== false){
         plugins.push({
             resolve: '@arrempee/gatsby-plugin-taxonomies',
             options: {
-                termsResolvers: {
-                    MdxPage: mdxPageTermsResolver,
-                },
                 taxonomies: {
                     tags: {
                         label: 'Tags',
@@ -29,6 +41,10 @@ module.exports = themeOptions => {
                     },
                 },
                 ...themeOptions.taxonomyOptions,
+                termsResolvers: {
+                    MdxPage: mdxPageTermsResolver,
+                    ...themeOptions.termsResolvers,
+                },
             },
         })
     }

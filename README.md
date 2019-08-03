@@ -36,9 +36,12 @@ Once you reach that point, follow these rough steps if you want to add it to ano
 For the purpose of maximum reusability, `gatsby-theme-mdx-blog` is composed from
 a few smaller themes and plugins that aim to be usable in their own right.
 
-- **`@arrempee/gatsby-theme-mdx-collections`** provides the logic for grouping
-  MDX files into collections and generating pages from them. This theme uses and
-  extends the page creation logic from `@arrempee/gatsby-theme-mdx-pages`.
+- **`@arrempee/gatsby-theme-mdx-pages`** creates a page from each MDX file,
+  using their path and frontmatter to infer which template to use.
+
+- **`@arrempee/gatsby-plugin-collections`** provides the logic for grouping MDX
+  files into collections such that things like blog posts can be easily
+  distinguished from regular pages.
 
 - **`@arrempee/gatsby-plugin-taxonomies`** is a scaffold for adding arbitrary
   taxonomies to arbitrary nodes, but trades ease of use for modularity.
@@ -48,9 +51,9 @@ a few smaller themes and plugins that aim to be usable in their own right.
 
 ## Configuration
 
-While all of this configuration is inherited from this theme's constituent parts
-and can be found in their READMEs, but all relevant configuration should be
-shown here as well.
+Almost all of this configuration is inherited from this theme's constituent
+parts and can be found in their READMEs, but all relevant configuration should
+be shown here as well.
 
 That said, checking out the READMEs and source of these parts will likely give
 better context.
